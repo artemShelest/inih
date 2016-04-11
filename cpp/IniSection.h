@@ -2,11 +2,11 @@
    Usage:
    1. Define your section within a code:
    INIH_SECTION(confTest, testSection) // at the start of a section
-   INIH_STR_ENTRY(str, SECTION_STR_DEFAULT) // define different entry types,
+   INIH_STR_ENTRY(str, "defaultString") // define different entry types,
    // missing entries will be returned as default values that you specify here
-   INIH_INT_ENTRY(intValue, SECTION_INT_DEFAULT)
-   INIH_REAL_ENTRY(realValue, SECTION_REAL_DEFAULT)
-   INIH_BOOL_ENTRY(boolValue, SECTION_BOOL_DEFAULT)
+   INIH_INT_ENTRY(intValue, 42)
+   INIH_REAL_ENTRY(realValue, 3.14)
+   INIH_BOOL_ENTRY(boolValue, TRUE)
    INIH_SECTION_ENDS
    2. Use elsewhere:
    confTest ct(reader);
